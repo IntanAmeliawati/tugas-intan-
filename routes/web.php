@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\akuncontroller;
 use App\Http\Controllers\AccountController;
-
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\KelasController;
 
 
 /*
@@ -25,12 +26,16 @@ use App\Http\Controllers\AccountController;
 // Route::get('/akun/create', [akuncontroller::class, 'create']);
 
 
-Route::view('/', 'template.master');
-Route::view('/home', 'template.master');
-Route::get('/data-table', [AkunController::class, 'index'])->name('indexAkun');
-Route::get('/table', [AkunController::class, 'create'])->name('createAkun');
+// Route::view('/', 'template.master');
+// Route::view('/home', 'template.master');
+// Route::get('/data-table', [AkunController::class, 'index'])->name('indexAkun');
+// Route::get('/table', [AkunController::class, 'create'])->name('createAkun');
 
 //route untuk url Account
 Route::get('/account', [AccountController::class, 'index'])->name('indexAccount');
 Route::get('/account/create', [AccountController::class, 'create'])->name('createAccount');
 Route::get('/account/show', [AccountController::class, 'show'])->name('showAccount');
+
+Route::resource('student', SiswaController::class);
+
+Route::resource('class', KelasController::class);
