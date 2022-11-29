@@ -1,7 +1,7 @@
 @extends('template.master')
 
 @section('judul')
-  <h1>Blank Page</h1>
+  <h1>Ini halaman index</h1>
 @endsection
 
 @section('content')

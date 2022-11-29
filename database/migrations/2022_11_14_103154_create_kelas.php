@@ -15,8 +15,10 @@ class CreateKelas extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kelas', 20);
-            $table->string('jurusan', 100);
+             // id .. create id as varchar data type with length character 20
+             $table->string('nama_kelas', 20);
+             // jurusan .. create jurusan as varchar data type with length character 100
+             $table->string('jurusan', 100);
             $table->timestamps();
         });
     }
